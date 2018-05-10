@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 	<head>
 		<!-- 
 			Mettre en et es
@@ -9,7 +9,7 @@
 		<meta name="viewport" 					content="width=device-width, initial-scale=1.0">
 		<meta name="description" 				content="Cette Pâques sanglante est l'une des plus importante crise politique québécoise. La ville de Québec se soulève et l'armée tire sur la foule." data-tkey />
 		
-		<meta property="og:url"					content="http://www.quebec1918.com" />
+		<meta property="og:url"					content="https://www.quebec1918.com" />
 		<meta property="og:type"				content="website" />
 		<meta property="og:title"				content="Québec 1918&nbsp;: le centenaire des émeutes contre la conscription" data-tkey />
 		<meta property="og:description"			content="Cette Pâques sanglante est l'une des plus importante crise politique québécoise. La ville de Québec se soulève et l'armée tire sur la foule." data-tkey />
@@ -17,6 +17,11 @@
 		<meta property="fb:app_id"				content="1902382743113796" />
 
 		<meta name="google-site-verification"	content="_4Pk0QMoT3YFUOSHlKssaCQ6NxdDFAnmFvCMrYqOpnY" />
+		
+		<link rel="canonical" href="https://www.quebec1918.com/" />
+		<link rel="alternate" href="https://www.quebec1918.com/?lang=fr" hreflang="fr" />
+		<link rel="alternate" href="https://www.quebec1918.com/?lang=es" hreflang="es" />
+		<link rel="alternate" href="https://www.quebec1918.com/?lang=en" hreflang="en" />
 		
 		<style>
 			/*manque TrueType, EOT or SVG*/
@@ -102,7 +107,7 @@
 				cursor: pointer;
 				font-weight:bold;
 			}
-			footer button {
+			.interface footer button {
 				border-radius: 25px;
 				height: 50px;
 				width: 50px;
@@ -383,6 +388,73 @@
 				};
 			}
 			
+			var library = {
+				"en" : {
+					"Cette Pâques sanglante est l'une des plus importante crise politique québécoise. La ville de Québec se soulève et l'armée tire sur la foule.":"This thing is a formidable thing",
+					"Centenaire des émeutes contre la conscription" : "Centenary of riots against conscription",
+					"Québec 1918&nbsp;: le centenaire des émeutes contre la conscription" : "Québec 1918 : centenary of riots against conscription",
+					"Québec 1918 : le centenaire des émeutes contre la conscription, peintures sur papier marouflé sur mur, Québec, Canada, 2018" : "Québec 1918 : centenary of riots against conscription, peintures sur papier marouflé sur mur, Québec, Canada, 2018",
+					"Ça fait 100 ans qu'a eu lieu les émeutes de la conscription à Québec. Lors de la Pâques de 1918, pendant 5 jours, la ville est à feu et à sang&nbsp;: la population se soulève, des journaux sont saccagés et l'armée tire sur la foule. Il s'agit d'une des plus importante crise politique&nbsp;québécoise." : "It's been 100 years that we had the riots against conscription",
+					"Cet épisode méconnu mérite d'être mis en&nbsp;lumière.":"This episody just have to be put in the light",
+					"Commencer &gt;":"Start  &gt;",
+					"À venir":"Soon",
+					"Une <a href=\"https://www.facebook.com/events/206381930139190/\" target=\"_blank\">visite guidée sur le thème des émeutes</a> aura lieu samedi 5 mai, 17h, à la Place D'Youville.":"A guided visit <a href=\"https://www.facebook.com/events/206381930139190/\" target=\"_blank\">walk the line</a>",
+					"Recommencer &lt;":"Restart &lt;",
+					"Allons voir":"Let's see",
+					"Aller au jour suivant &gt;":"Go to next day &gt;",
+					"Fin":"End",
+					"Intro":"Intro",
+					"Jour 1":"Day 1",
+					"Jour 2":"Day 2",
+					"Jour 3":"Day 3",
+					"Jour 4":"Day 4",
+					"Jour 5":"Day 5"
+				},
+				"es" : {
+					"Cette Pâques sanglante est l'une des plus importante crise politique québécoise. La ville de Québec se soulève et l'armée tire sur la foule.":"Eso es la pasqua sangriento",
+					"Centenaire des émeutes contre la conscription" : "Centenario de los disturbios contra la conscripción",
+					"Québec 1918&nbsp;: le centenaire des émeutes contre la conscription" : "Québec 1918 : centenario de los disturbios contra la conscripción",
+					"Québec 1918 : le centenaire des émeutes contre la conscription, peintures sur papier marouflé sur mur, Québec, Canada, 2018" : "Québec 1918 : Centenario de los disturbios contra la conscripción, pintura rupestre, ",
+					"Ça fait 100 ans qu'a eu lieu les émeutes de la conscription à Québec. Lors de la Pâques de 1918, pendant 5 jours, la ville est à feu et à sang&nbsp;: la population se soulève, des journaux sont saccagés et l'armée tire sur la foule. Il s'agit d'une des plus importante crise politique&nbsp;québécoise." : "Hace 100 anos que hemos tenido los disturbios de la conscripcion",
+					"Cet épisode méconnu mérite d'être mis en&nbsp;lumière.":"Este episodio merece que le sacamos de la oscuridad",
+					"Commencer &gt;":"Empiezar  &gt;",
+					"À venir":"Pronto",
+					"Une <a href=\"https://www.facebook.com/events/206381930139190/\" target=\"_blank\">visite guidée sur le thème des émeutes</a> aura lieu samedi 5 mai, 17h, à la Place D'Youville.":"Una <a href=\"https://www.facebook.com/events/206381930139190/\" target=\"_blank\">visita guia sobre los disturbios</a>",
+					"Recommencer &lt;":"Reempezar &lt;",
+					"Allons voir":"Veremos",
+					"Aller au jour suivant &gt;":"Vamos al dia siguiente &gt;",
+					"Fin":"Fin",
+					"Intro":"Intro",
+					"Jour 1":"Dia 1",
+					"Jour 2":"Dia 2",
+					"Jour 3":"Dia 3",
+					"Jour 4":"Dia 4",
+					"Jour 5":"Dia 5",
+					"Fin":"Fin"
+				},
+				"fr" : {
+					"Cette Pâques sanglante est l'une des plus importante crise politique québécoise. La ville de Québec se soulève et l'armée tire sur la foule.":"Cette Pâques sanglante est l'une des plus importante crise politique québécoise. La ville de Québec se soulève et l'armée tire sur la foule.",
+					"Centenaire des émeutes contre la conscription" : "Centenaire des émeutes contre la conscription",
+					"Québec 1918&nbsp;: le centenaire des émeutes contre la conscription" : "Québec 1918&nbsp;: le centenaire des émeutes contre la conscription",
+					"Québec 1918 : le centenaire des émeutes contre la conscription, peintures sur papier marouflé sur mur, Québec, Canada, 2018" : "Québec 1918 : le centenaire des émeutes contre la conscription, peintures sur papier marouflé sur mur, Québec, Canada, 2018",
+					"Ça fait 100 ans qu'a eu lieu les émeutes de la conscription à Québec. Lors de la Pâques de 1918, pendant 5 jours, la ville est à feu et à sang&nbsp;: la population se soulève, des journaux sont saccagés et l'armée tire sur la foule. Il s'agit d'une des plus importante crise politique&nbsp;québécoise." : "Ça fait 100 ans qu'a eu lieu les émeutes de la conscription à Québec. Lors de la Pâques de 1918, pendant 5 jours, la ville est à feu et à sang&nbsp;: la population se soulève, des journaux sont saccagés et l'armée tire sur la foule. Il s'agit d'une des plus importante crise politique&nbsp;québécoise.",
+					"Cet épisode méconnu mérite d'être mis en&nbsp;lumière.":"Cet épisode méconnu mérite d'être mis en lumière.",
+					"Commencer &gt;":"Commencer &gt;",
+					"À venir":"À venir",
+					"Une <a href=\"https://www.facebook.com/events/206381930139190/\" target=\"_blank\">visite guidée sur le thème des émeutes</a> aura lieu samedi 5 mai, 17h, à la Place D'Youville.":"Une <a href=\"https://www.facebook.com/events/206381930139190/\" target=\"_blank\">visite guidée sur le thème des émeutes</a> aura lieu samedi 5 mai, 17h, à la Place D'Youville.",
+					"Recommencer &lt;":"Recommencer &lt;",
+					"Allons voir":"Allons voir",
+					"Aller au jour suivant &gt;":"Aller au jour suivant &gt;",
+					"Fin":"Fin",
+					"Intro":"Intro",
+					"Jour 1":"Jour 1",
+					"Jour 2":"Jour 2",
+					"Jour 3":"Jour 3",
+					"Jour 4":"Jour 4",
+					"Jour 5":"Jour 5"
+				}
+			};
+			
 			//fin Multilang
 			
 			var soundAudio = new Audio();
@@ -390,8 +462,6 @@
 			var point = '<svg version="1.1" class="point" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><metadata><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata><g transform="translate(0 -247.06)"><path d="m13.846 295.65-12.048-23.052 12.622 11.231-5.0487-32.514l10.786 19.51 20.654-18.915-8.032 26.008 15.49-4.1376-10.327 11.822 7.4583 0.59112-8.6057 9.4573z" stroke="#1c1c1c" stroke-linejoin="round" stroke-opacity=".98039" stroke-width="1.629"/></g></svg>';
 			var etape = -1;
 			var lang = new Lang(['fr','en','es']);
-			lang.setLang('fr');
-			
 			var map = {
   "etapes": [
     {
@@ -886,7 +956,17 @@
 			function stopSounds () {
 				$(bgAudio).animate({volume: 0}, 2000);
 			}
-
+			
+			function getParam (name){
+				var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
+				if (results==null){
+				   return null;
+				}
+				else{
+				   return results[1] || 0;
+				}
+			}
+			
 			$(function() {
 				
 				$("body").swipe( {
@@ -1087,7 +1167,9 @@
 				$("[data-lang]").click (function(e) {
 					e.preventDefault();
 					
-					lang.setLang($(this).data("lang"));
+					$("[data-lang]").removeClass ("selected");
+					$(this).addClass ("selected");
+					lang.setLang($(this).data("lang"), library[$(this).data("lang")]);
 				});
 				
 				//preload
@@ -1103,7 +1185,11 @@
 					});
 				});
 
+				var langParam = (getParam("lang") ? getParam("lang") : 'fr' );
+				lang.setLang(langParam, library[langParam]);
+			
 			});
+			
 			
 		</script>
 		<main>
@@ -1123,8 +1209,6 @@
 
 					<p><label><button data-tkey>Commencer &gt;</button></label></p>
 					
-					<h2 class="text-align-left" data-tkey>À venir</h2>
-					<p class="text-align-left" data-tkey>Une <a href="https://www.facebook.com/events/206381930139190/" target='_blank'>visite guidée sur le thème des émeutes</a> aura lieu samedi 5 mai, 17h, à la Place D'Youville.</p>
 				</div>
 				<p class="restart"><label><button data-tkey>Recommencer &lt;</button></label></p>
 			</div>
@@ -1165,8 +1249,8 @@
 				</footer>
 			</div>
 			<footer class="signature text-align-center">
+				<p><button data-lang="en">english</button>  <button data-lang="es">español</button>  <button data-lang="fr" class="selected">français</button></p>
 				<p><a href="http://www.lanterne.ca/" target="_blank">La Lanterne</a></p>
-				<p><a href="#" data-lang="en">english</a> - <a href="#" data-lang="es">español</a> - <a href="#" data-lang="fr">français</a></p>
 			</footer>
 		</main>
 	</body>
