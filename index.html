@@ -64,7 +64,7 @@
 			.header-intro {
 				text-align: center;
 			}
-			.header-modal .sous-titre {
+			.sous-titre {
 				text-transform: uppercase;
 				font-family: Courier New;
 				font-weight: bold;
@@ -77,8 +77,7 @@
 				border-width: 2px;
 			}
 			hr:nth-child(2n+1) {
-				border-style: solid;
-				border-width: 0.5px;
+				border: solid 0.5px;
 			}
 			footer nav {
 				text-align:center;
@@ -159,13 +158,15 @@
 			.start {
 				padding:5px 10px;
 			}
-.text-align-center {
-	text-align:center;
-}
+			.text-align-center {
+				text-align:center;
+			}
 			.text-align-left {
 				text-align:left;
 			}
-
+			.padding-top {
+				padding-top: 20px;
+			}
 			.map {
 				background-image: url('https://lh3.googleusercontent.com/xv2klkITkdq7_Nf92l6J7cuAiB8WIZL69XD9WDNSAIQk-8ENG4Rmkk_ePJqzdi20pc_PLwgn9P3EZJNdUK1uoB2OroRHtii2tXjBrdLPmmfch5fGcQv2IcoUGswvfPuOIAwmuqpcTs-jvJexOptqUvm5QBE8pb10VVOJpw8DBlmy8U2VloRvYZoVK6xj-LfANSh0MGOOUbiaR9mevTlHiz1EGIN8u_5hjudqDggxlKR0XsCdHQQ2YCMQfTujQ6fft3SSRnKiECtE6lTrIV7bCToa5LrEAIOnqAXiUOkw_a_DDG1PNsiulQXYxHuDFc-s2PNT3uNnBgworFvkWixNRYr35WS0PBPl_yfp1_YTDpYZHzGRBR8042BYKGT0apjODrjrLv4dUCTAuOKzEl5XSnu2cMgXyoh2yKR_J7H0am7djDFmCfr3E4r7DFxVLSr_pEIoP0AEvWcae6dHw_N4I6wSxbzA4pT6R1oQoWQwx2e_-x4IHKuFS2dIm7I7h4mELdpQyc61fIF_O9Dn41rMC4NLj0YDlU2VE4IQ1syB4xXPK6x6QVa2VrCKxKlbU4H4DigjR_T7zkfo4pa9Smc8MIxJ_yKRrYx5DWFoKyQ=w682-h575-no');
 				background-position: top center;
@@ -1151,7 +1152,7 @@
 				
 				$(".header-intro .restart").click (function () {
 					etape = -1;
-					$(".header-intro .start button").click();
+					$(".header-intro .start-btn").click();
 				});
 				
 				function switchDay (newEtape) {
@@ -1283,7 +1284,7 @@
 				}
 				
 				//Gestion intro
-				$(".header-intro .start button").click (function() {
+				$(".header-intro .start-btn").click (function() {
 					$(".overlay").slideUp();
 					$(".header-intro").slideUp(1000, function() {
 						$(".interface").slideDown(1000);
@@ -1323,22 +1324,41 @@
 		<main>
 			<div class="header-intro">
 				<h1><a href="http://www.quebec1918.com">Québec 1918</a></h1>
-				<hr>
-				<div class="sous-titre" data-tkey>Centenaire des émeutes contre la conscription</div>
-				<hr>
-				<hr>
+				<div class="sous-titre">
+					<hr>
+					<div data-tkey>Centenaire des émeutes contre la conscription</div>
+					<hr>
+					<hr>
+				</div>
 				<div class="start">
-					<figure>
-						<a href="#"><img src="https://lh3.googleusercontent.com/zEkxzK6PT5cqjrzM3QajeGZOJY9Em9UhmT7U5mF9mH_q2ot4V1QcNQhQP5AtWpgR8684WJvOXtt0o0eZeMAjnWwAYgMGbf1TvIdjKWYpmSSCclEg0VP97nY3i4eMdgNmEa35DUit4XT0Ar8j37MHO9bh_Wb5xtpCOIUENb5T-EZu63uZQUZtX8GeeMZp8hGg4A-heSjkBZy-7gFA8_GH8JMVY75BMKltGAZ2KcPcHxycPEuWwIB_gesqM0bxc_G_XEfgs1f7Bgwt7c5TheE1g4gW_WSyEzNCcgyBFGHcGeaqmwpMHP40y-_wsYPWwDi157j4mgbIBoS-n-jEb0AJIYDH0-QS4lw7rNd3HzN-HurSlXp2Gfg4FN4GK1Qn9crXJYS088IzxxB0dUxZyzGMmef-SHfaNMM3SUFUE_9oO8C6rygYkr9lFdfvcIlMcWzE5MaNUftIiIwM9tDft7zyix2vRD-SggaZ6tAR_xg0JePPIbrgiM-VcNQtN_Je_JV3SCg6HTWz-xADdXUVHM1icAcREywXBVuJX-PRR13JhjSm10jh_ID6bAUQAH5SmJaXZWXlLDQ7JbMEGGYg6VpAaVxmBcgRgmoK3Lt6ZFc=w662-h375-no" alt="Affrontement"></a>
-						<figcaption><a href="http://www.wartinpantois.com">Wartin Pantois</a>, <span data-tkey>Québec 1918 : le centenaire des émeutes contre la conscription, peintures sur papier marouflé sur mur, Québec, Canada, 2018</span></figcaption>
-					</figure>
-					<p class="text-align-left" data-tkey>Ça fait 100 ans qu'a eu lieu les émeutes de la conscription à Québec. Lors de la Pâques de 1918, pendant 5 jours, la ville est à feu et à sang&nbsp;: la population se soulève, des journaux sont saccagés et l'armée tire sur la foule. Il s'agit d'une des plus importante crise politique&nbsp;québécoise.</p>
-					<p class="text-align-left" data-tkey>Cet épisode méconnu mérite d'être mis en&nbsp;lumière.</p>
+					<div class="section1">
+						<figure>
+							<a href="#"><img src="https://lh3.googleusercontent.com/zEkxzK6PT5cqjrzM3QajeGZOJY9Em9UhmT7U5mF9mH_q2ot4V1QcNQhQP5AtWpgR8684WJvOXtt0o0eZeMAjnWwAYgMGbf1TvIdjKWYpmSSCclEg0VP97nY3i4eMdgNmEa35DUit4XT0Ar8j37MHO9bh_Wb5xtpCOIUENb5T-EZu63uZQUZtX8GeeMZp8hGg4A-heSjkBZy-7gFA8_GH8JMVY75BMKltGAZ2KcPcHxycPEuWwIB_gesqM0bxc_G_XEfgs1f7Bgwt7c5TheE1g4gW_WSyEzNCcgyBFGHcGeaqmwpMHP40y-_wsYPWwDi157j4mgbIBoS-n-jEb0AJIYDH0-QS4lw7rNd3HzN-HurSlXp2Gfg4FN4GK1Qn9crXJYS088IzxxB0dUxZyzGMmef-SHfaNMM3SUFUE_9oO8C6rygYkr9lFdfvcIlMcWzE5MaNUftIiIwM9tDft7zyix2vRD-SggaZ6tAR_xg0JePPIbrgiM-VcNQtN_Je_JV3SCg6HTWz-xADdXUVHM1icAcREywXBVuJX-PRR13JhjSm10jh_ID6bAUQAH5SmJaXZWXlLDQ7JbMEGGYg6VpAaVxmBcgRgmoK3Lt6ZFc=w662-h375-no" alt="Affrontement"></a>
+							<figcaption><a href="http://www.wartinpantois.com">Wartin Pantois</a>, <span data-tkey>Québec 1918 : le centenaire des émeutes contre la conscription, peintures sur papier marouflé sur mur, Québec, Canada, 2018</span></figcaption>
+						</figure>
+						<p class="text-align-left" data-tkey>Ça fait 100 ans qu'a eu lieu les émeutes de la conscription à Québec. Lors de la Pâques de 1918, pendant 5 jours, la ville est à feu et à sang&nbsp;: la population se soulève, des journaux sont saccagés et l'armée tire sur la foule. Il s'agit d'une des plus importante crise politique&nbsp;québécoise.</p>
+						<p class="text-align-left" data-tkey>Cet épisode méconnu mérite d'être mis en&nbsp;lumière.</p>
 
-					<p><label><button data-tkey>Commencer &gt;</button></label></p>
-					
+						<p><label><button clas="start-btn" data-tkey>Commencer &gt;</button></label></p>
+					</div>
+					<div class="section2 padding-top">
+						<div class="sous-titre">
+							<hr>
+							<div>Documentaire audio</div>
+							<hr>
+							<hr>
+						</div>
+						<p class="text-align-left">5 documentaires audio pour 5 jours d'émeutes.</p>
+						<ul class="text-align-left">
+							<li><a href="https://soundcloud.com/user-482797296/quebec-1918-episode-2-le-contexte-par-rejean-lemoine-et-mathieu-houle-courcelle">Épisode 2</a>, le contexte par Réjean Lemoine et Mathieu Houle-Courcelles</li>
+							<li><a href="https://soundcloud.com/user-482797296/quebec-1918-episode-3-la-memoire-et-le-souvenir-par-pierre-yves-renaud">Épisode 3</a>, la mémoire et le souvenir par Pierre-Yves Renaud</li>
+							<li><a href="https://soundcloud.com/user-482797296/quebec-1918-episode-4-les-hurons-wendat-face-a-la-conscription-par-jean-philippe-thivierge">Épisode 4</a>, les Hurons-Wendat face à la conscription par Jean-Philippe Thivierge</li>
+						</ul>
+					</div>
 				</div>
 				<p class="restart"><label><button data-tkey>Recommencer &lt;</button></label></p>
+				
+				
 			</div>
 			<div id="modal" class="interface">
 				<div class="header-modal">
